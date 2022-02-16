@@ -15,10 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssc-F1-XpP">
-                                <rect key="frame" x="150" y="118" width="115" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssc-F1-XpP">
+                                <rect key="frame" x="150" y="118" width="90" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1236.231884057971" y="-401.11607142857139"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="pfL-fL-6GT">
             <objects>
-                <tabBarController id="3g9-uz-HIz" sceneMemberID="viewController">
+                <tabBarController title="Initial View Controller" id="3g9-uz-HIz" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fwx-go-qno">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -75,11 +75,49 @@
                     <connections>
                         <segue destination="UEv-Bh-Q4b" kind="relationship" relationship="viewControllers" id="KP0-kx-0Um"/>
                         <segue destination="O6Q-Jg-KNY" kind="relationship" relationship="viewControllers" id="glb-1F-HkC"/>
+                        <segue destination="lV3-v6-nNc" kind="relationship" relationship="viewControllers" id="unj-5u-8lT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeQ-zR-Lxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="-77"/>
+            <point key="canvasLocation" x="-1517" y="-401"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="iRv-xp-YD8">
+            <objects>
+                <viewController id="gvM-XW-dlj" customClass="thirdViewController" customModule="HackwichFour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lsv-Io-d5b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGQ-Pp-2tU">
+                                <rect key="frame" x="56" y="152" width="326" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="53"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1x-Fr-OoJ">
+                                <rect key="frame" x="120" y="432" width="199" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="69"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeColorToGreen:" destination="gvM-XW-dlj" eventType="touchUpInside" id="oFt-R7-CQl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Oxd-se-Mx3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M5x-St-Lwx"/>
+                    <connections>
+                        <outlet property="thirdTabLabel" destination="AGQ-Pp-2tU" id="Jbo-6n-g68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2k-sj-5Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="-1107.5892857142856"/>
         </scene>
         <!--Aboot-->
         <scene sceneID="P8U-Pz-dlA">
@@ -100,11 +138,11 @@
             </objects>
             <point key="canvasLocation" x="326.08695652173918" y="-401.11607142857139"/>
         </scene>
-        <!--Item 2-->
+        <!--Classes-->
         <scene sceneID="7sl-UI-tTr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O6Q-Jg-KNY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Lop-SK-BMb"/>
+                    <tabBarItem key="tabBarItem" title="Classes" image="paperplane.fill" catalog="system" id="Lop-SK-BMb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNc-T5-Hcr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -119,8 +157,29 @@
             </objects>
             <point key="canvasLocation" x="326.08695652173918" y="245.75892857142856"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="lPc-7G-r9Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lV3-v6-nNc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="9Tr-N3-HL4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0e-Q7-jAn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gvM-XW-dlj" kind="relationship" relationship="rootViewController" id="ctU-Mk-kFk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sL4-M1-XY6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324.63768115942031" y="-1107.5892857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
